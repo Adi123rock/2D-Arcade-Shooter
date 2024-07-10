@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
+    public float h_boss=500f;
+    public Slider slider;
     float current_time,starting_time=10f;
     public Animator animator;
     public GameObject boss_hbar,boss;
@@ -12,6 +15,8 @@ public class Boss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        slider.maxValue=h_boss;
+        slider.value=h_boss;
         animator.SetBool("BossEn", true);
         current_time=starting_time;
         //boss_hbar.SetActive(false);
@@ -29,13 +34,17 @@ public class Boss : MonoBehaviour
             current_time=starting_time;
             Debug.Log("Mlp_fire");
             FindObjectOfType<Mlp_blt_fire>().enabled=true;
-            Invoke("stopfiring",5f);
+            Invoke("stopfiring",2f);
         }
         
         //Bosskahbar.position=transform.position;
         //rb.AddForce(new Vector2(0f,10f));
         // if(player.position.y>5)
         // {}
+    }
+    public void dec_hbar()
+    {
+        slider.value-=50;//player damage minus karenge
     }
     void stopfiring()
     {

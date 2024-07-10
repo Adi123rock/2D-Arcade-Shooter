@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 6780950045619875663}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 727bbfe3873fec74eaf906c5e4337a51, type: 3}
-  m_Color: {r: 0.9716981, g: 0.9604174, b: 0.9579477, a: 1}
+  m_Color: {r: 0.9764151, g: 0.9926933, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -210,10 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d578d3e50571e140a1880350f3a3185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
   Lvlcomp: {fileID: 0}
-  boss: {fileID: 0}
-  bosshltbar: {fileID: 0}
   winpanel: {fileID: 0}
 --- !u!82 &6780950045619875663
 AudioSource:
@@ -320,7 +317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6481133046573913156}
-  - component: {fileID: 8654950268848768037}
+  - component: {fileID: 8565251979117810869}
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
@@ -343,7 +340,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 378303692749767920}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8654950268848768037
+--- !u!114 &8565251979117810869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -355,8 +352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40de62bbebdb4be4499e2816e6ed3675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firingspeedplayer: 10000
   bullet: {fileID: 2889370819680755051, guid: 3a5485e21348aeb418ab647cdea450fb, type: 3}
+  firedblt: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+  player: {fileID: 378303692749767920}
+  bullt: {fileID: 113814304139855761, guid: 3a5485e21348aeb418ab647cdea450fb, type: 3}
   blt: {fileID: 7607459025597166842, guid: 3a5485e21348aeb418ab647cdea450fb, type: 3}
 --- !u!1001 &8162660087906346889
 PrefabInstance:

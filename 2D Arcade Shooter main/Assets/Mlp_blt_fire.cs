@@ -7,17 +7,17 @@ public class Mlp_blt_fire : MonoBehaviour
     Vector3 offset,offset2;
     public float firevelocity=5f; 
     public Transform player;
-    float c_time = 0f, s_time = 0.01f;
+    float c_time = 0f, s_time = 0.1f;
     GameObject fired_blt1,fired_blt2,fired_blt3;
     public GameObject bullet;
     Transform firepoint;
     void Start()
     {
-        offset.x=1;
+        offset.x=0.5f;
         offset.y=0;
         offset.z=0;
         offset2.x=0;
-        offset2.y=1;
+        offset2.y=0.5f;
         offset2.z=0;
     }
     void Update()
@@ -29,7 +29,6 @@ public class Mlp_blt_fire : MonoBehaviour
         {
             attack();
         }
-
     }
     void attack()
     {
@@ -67,8 +66,8 @@ public class Mlp_blt_fire : MonoBehaviour
     }
     void frontfiring()
     {
-        fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
-        fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -firevelocity);
+        // fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
+        // fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -firevelocity);
         fired_blt2 = Instantiate(bullet, firepoint.position+offset, firepoint.rotation);
         fired_blt2.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -firevelocity);
         fired_blt3 = Instantiate(bullet, firepoint.position-offset, firepoint.rotation);
@@ -77,8 +76,8 @@ public class Mlp_blt_fire : MonoBehaviour
     }
     void R45_firing()
     {
-        fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
-        fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(firevelocity, -firevelocity);
+        // fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
+        // fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(firevelocity, -firevelocity);
         fired_blt2 = Instantiate(bullet, firepoint.position+offset, firepoint.rotation);
         fired_blt2.GetComponent<Rigidbody2D>().velocity = new Vector2(firevelocity, -firevelocity);
         fired_blt3 = Instantiate(bullet, firepoint.position-offset, firepoint.rotation);
@@ -87,8 +86,8 @@ public class Mlp_blt_fire : MonoBehaviour
     }
     void R90_firing()
     {
-        fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
-        fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(firevelocity, 0f);
+        // fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
+        // fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(firevelocity, 0f);
         fired_blt2 = Instantiate(bullet, firepoint.position+offset2, firepoint.rotation);
         fired_blt2.GetComponent<Rigidbody2D>().velocity = new Vector2(firevelocity, 0f);
         fired_blt3 = Instantiate(bullet, firepoint.position-offset2, firepoint.rotation);
@@ -97,8 +96,8 @@ public class Mlp_blt_fire : MonoBehaviour
     }
     void L45_firing()
     {
-        fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
-        fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(-firevelocity, -firevelocity);
+        // fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
+        // fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(-firevelocity, -firevelocity);
         fired_blt2 = Instantiate(bullet, firepoint.position+offset, firepoint.rotation);
         fired_blt2.GetComponent<Rigidbody2D>().velocity = new Vector2(-firevelocity, -firevelocity);
         fired_blt3 = Instantiate(bullet, firepoint.position-offset, firepoint.rotation);
@@ -107,8 +106,8 @@ public class Mlp_blt_fire : MonoBehaviour
     }
     void L90_firing()
     {
-        fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
-        fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(-firevelocity, 0f);
+        // fired_blt1 = Instantiate(bullet, firepoint.position, firepoint.rotation);
+        // fired_blt1.GetComponent<Rigidbody2D>().velocity = new Vector2(-firevelocity, 0f);
         fired_blt2 = Instantiate(bullet, firepoint.position+offset2, firepoint.rotation);
         fired_blt2.GetComponent<Rigidbody2D>().velocity = new Vector2(-firevelocity, 0f);
         fired_blt3 = Instantiate(bullet, firepoint.position-offset2, firepoint.rotation);

@@ -7073,18 +7073,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2165364278395837212, guid: 499049fb6958c7f43bc0f08bf163dd7e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165364278395837212, guid: 499049fb6958c7f43bc0f08bf163dd7e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.93374586
+      objectReference: {fileID: 0}
+    - target: {fileID: 2165364278395837212, guid: 499049fb6958c7f43bc0f08bf163dd7e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.91224635
+      objectReference: {fileID: 0}
     - target: {fileID: 2711056437055929551, guid: 499049fb6958c7f43bc0f08bf163dd7e, type: 3}
       propertyPath: m_Name
       value: player_1
       objectReference: {fileID: 0}
-    - target: {fileID: 8654950268848768037, guid: 499049fb6958c7f43bc0f08bf163dd7e, type: 3}
-      propertyPath: bullt
-      value: 
-      objectReference: {fileID: 113814304139855761, guid: 3a5485e21348aeb418ab647cdea450fb, type: 3}
-    - target: {fileID: 8654950268848768037, guid: 499049fb6958c7f43bc0f08bf163dd7e, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1092433382}
     - target: {fileID: 8891871114822124031, guid: 499049fb6958c7f43bc0f08bf163dd7e, type: 3}
       propertyPath: gameovr
       value: 

@@ -8,7 +8,6 @@ public class firebullet : MonoBehaviour
     public Vector3 offset;
     public Transform player,bullt;
     public Rigidbody2D blt;
-    public float firingspeedplayer = 10000f;
     // Start is called before the first frame update
     void Start()
     {
