@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Lvlcmp : MonoBehaviour
 {
     static int i = 0;
-    
+    public static int coins;
     public GameObject Lvlcomp;
     public GameObject winpanel;
     // Start is called before the first frame update
@@ -15,6 +15,7 @@ public class Lvlcmp : MonoBehaviour
     {
         if (collider.tag == "Gamecomp")
         {
+            UIvarables.coins+=coins;
             if (i == 0) 
             { 
                 UIvarables.CompLvlno = 1; 

@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class bulletcollision : MonoBehaviour
 {
+    static int a=0;
+    public Animator animator,animator2;
     public int health=100;
     public static int damage=50;
     //public Transform  obst;
@@ -35,9 +37,16 @@ public class bulletcollision : MonoBehaviour
     }
     void Explode()
     {
+        a++;
         // Instantiate(explosionEffect,transform.position,transform.rotation);
         Debug.Log("off");
         Destroy(obstacle);
+        if(animator!=null)
+        {
+            animator.SetInteger("number",a);
+            animator2.SetInteger("number",a);
+        }
+        
         //explosionEffect.SetActive(false);
     }
     void Destroyexpl()

@@ -5,9 +5,13 @@ using UnityEngine.UI;
 
 public class Spship_changer : MonoBehaviour
 {
+    
     string namespaceship=UIvarables.namespaceship;
     public GameObject S_1,S_2,S_3,S_4,S_5,S_6;
+    void Start()
+    {
 
+    }
     void Update()
     {
         Changespship();

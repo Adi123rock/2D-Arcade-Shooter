@@ -1,13 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Spaceship : MonoBehaviour
 {
+    public TextMeshProUGUI Lvl_Spship, Hp_Spship, Dmg_Spship;
+    public GameObject buy_button, upgrade_button;
     public GameObject next_button, prev_button, S_1, S_2, S_3, S_4, S_5, S_6;
     int i = 0;
+    void Start()
+    {
+        Lvl_Spship.text = "Level:" + Spship_details.Lvl_S1.ToString();
+        Dmg_Spship.text = "Damage:" + Spship_details.dmg_S1.ToString();
+        Hp_Spship.text = "Hp:" + Spship_details.Hp_S1.ToString();
+        prev_button.SetActive(false);
+        S_1.SetActive(true);
+        S_2.SetActive(false);
+        if (Spship_details.S1)
+        {
+            buy_button.SetActive(false);
+            upgrade_button.SetActive(true);
+        }
+        else
+        {
+            buy_button.SetActive(true);
+            upgrade_button.SetActive(false);
+        }
+    }
     public void SelectSpaceship()
     {
         //SceneManager.LoadScene("UI");
@@ -75,7 +97,7 @@ public class Spaceship : MonoBehaviour
             if (Spship_details.S6)
             {
                 Debug.Log("S_6");
-                UIvarables.namespaceship ="S_6";
+                UIvarables.namespaceship = "S_6";
                 SceneManager.LoadScene("UI");
             }
             else
@@ -145,41 +167,119 @@ public class Spaceship : MonoBehaviour
         Debug.Log(i);
         if (i == 0)
         {
+            Lvl_Spship.text = "Level:" + Spship_details.Lvl_S1.ToString();
+            Dmg_Spship.text = "Damage:" + Spship_details.dmg_S1.ToString();
+            Hp_Spship.text = "Hp:" + Spship_details.Hp_S1.ToString();
             prev_button.SetActive(false);
             S_1.SetActive(true);
             S_2.SetActive(false);
+            if (Spship_details.S1)
+            {
+                buy_button.SetActive(false);
+                upgrade_button.SetActive(true);
+            }
+            else
+            {
+                buy_button.SetActive(true);
+                upgrade_button.SetActive(false);
+            }
         }
         else if (i == 1)
         {
+            Lvl_Spship.text = "Level:" + Spship_details.Lvl_S2.ToString();
+            Dmg_Spship.text = "Damage:" + Spship_details.dmg_S2.ToString();
+            Hp_Spship.text = "Hp:" + Spship_details.Hp_S2.ToString();
             prev_button.SetActive(true);
             S_1.SetActive(false);
             S_2.SetActive(true);
             S_3.SetActive(false);
+            if (Spship_details.S2)
+            {
+                buy_button.SetActive(false);
+                upgrade_button.SetActive(true);
+            }
+            else
+            {
+                buy_button.SetActive(true);
+                upgrade_button.SetActive(false);
+            }
         }
         else if (i == 2)
         {
+            Lvl_Spship.text = "Level:" + Spship_details.Lvl_S3.ToString();
+            Dmg_Spship.text = "Damage:" + Spship_details.dmg_S3.ToString();
+            Hp_Spship.text = "Hp:" + Spship_details.Hp_S3.ToString();
             S_2.SetActive(false);
             S_3.SetActive(true);
             S_4.SetActive(false);
+            if (Spship_details.S3)
+            {
+                buy_button.SetActive(false);
+                upgrade_button.SetActive(true);
+            }
+            else
+            {
+                buy_button.SetActive(true);
+                upgrade_button.SetActive(false);
+            }
         }
         else if (i == 3)
         {
+            Lvl_Spship.text = "Level:" + Spship_details.Lvl_S4.ToString();
+            Dmg_Spship.text = "Damage:" + Spship_details.dmg_S4.ToString();
+            Hp_Spship.text = "Hp:" + Spship_details.Hp_S4.ToString();
             S_3.SetActive(false);
             S_4.SetActive(true);
             S_5.SetActive(false);
+            if (Spship_details.S4)
+            {
+                buy_button.SetActive(false);
+                upgrade_button.SetActive(true);
+            }
+            else
+            {
+                buy_button.SetActive(true);
+                upgrade_button.SetActive(false);
+            }
         }
         else if (i == 4)
         {
+            Lvl_Spship.text = "Level:" + Spship_details.Lvl_S5.ToString();
+            Dmg_Spship.text = "Damage:" + Spship_details.dmg_S5.ToString();
+            Hp_Spship.text = "Hp:" + Spship_details.Hp_S5.ToString();
             next_button.SetActive(true);
             S_4.SetActive(false);
             S_5.SetActive(true);
             S_6.SetActive(false);
+            if (Spship_details.S5)
+            {
+                buy_button.SetActive(false);
+                upgrade_button.SetActive(true);
+            }
+            else
+            {
+                buy_button.SetActive(true);
+                upgrade_button.SetActive(false);
+            }
         }
         else if (i == 5)
         {
+            Lvl_Spship.text = "Level:" + Spship_details.Lvl_S6.ToString();
+            Dmg_Spship.text = "Damage:" + Spship_details.dmg_S6.ToString();
+            Hp_Spship.text = "Hp:" + Spship_details.Hp_S6.ToString();
             next_button.SetActive(false);
             S_5.SetActive(false);
             S_6.SetActive(true);
+            if (Spship_details.S6)
+            {
+                buy_button.SetActive(false);
+                upgrade_button.SetActive(true);
+            }
+            else
+            {
+                buy_button.SetActive(true);
+                upgrade_button.SetActive(false);
+            }
         }
     }
     /*

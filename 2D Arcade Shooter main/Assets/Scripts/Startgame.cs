@@ -1,18 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Startgame : MonoBehaviour
 {
+    public TextMeshProUGUI lvltext,cointext;
     public GameObject lvlselect;
-    string Lvlno;
+    static string Lvlno;
     //public GameObject lvl;
     public GameMAnager gamec;
     public void Lvlslct(string name)
     {
         lvlselect.SetActive(true);
         Lvlno=name;
+        lvltext.text=Lvlno;
+        if(Lvlno=="Level01")
+        {
+            cointext.text=Spship_details.L1_coins.ToString();
+            Lvlcmp.coins=Spship_details.L1_coins;
+        }
+        else if(Lvlno=="Level02")
+        {
+            cointext.text=Spship_details.L2_coins.ToString();
+            Lvlcmp.coins=Spship_details.L2_coins;
+        }
+        else if(Lvlno=="Level03")
+        {
+            cointext.text=Spship_details.L3_coins.ToString();
+            Lvlcmp.coins=Spship_details.L3_coins;
+        }
+        else if(Lvlno=="Level04")
+        {
+            cointext.text=Spship_details.L4_coins.ToString();
+            Lvlcmp.coins=Spship_details.L4_coins;
+        }
+        else if(Lvlno=="Level05")
+        {
+            cointext.text=Spship_details.L5_coins.ToString();
+            Lvlcmp.coins=Spship_details.L5_coins;
+        }
+        
         Debug.Log(Lvlno);
         //gamec.GetComponent<GameMAnager>().Lvlselction(Lvlno);
     } 

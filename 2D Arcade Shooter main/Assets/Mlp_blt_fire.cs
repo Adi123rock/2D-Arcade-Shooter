@@ -23,7 +23,7 @@ public class Mlp_blt_fire : MonoBehaviour
     void Update()
     {
         firepoint = FindObjectOfType<Boss>().firepoint.transform;
-        Debug.Log("DONE");
+        //Debug.Log("DONE");
         c_time -= 1 * Time.deltaTime;
         if (c_time <= 0f)
         {
