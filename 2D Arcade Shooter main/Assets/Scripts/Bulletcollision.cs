@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 public class bulletcollision : MonoBehaviour
 {
     static int a=0;
-    public Animator animator,animator2;
     public int health=100;
 
     public Animator headinganimator,villananimator ;
@@ -52,19 +51,12 @@ public class bulletcollision : MonoBehaviour
         //     Debug.Log("yep");
         // animator.SetFloat("EnemyKilled",EnemyKilled);
         // animator2.SetFloat("EnemyKilled",EnemyKilled);}
-        if(animator!=null)
-        {
-            animator.SetInteger("number",a);
-            animator2.SetInteger("number",a);
-        }
-        
         //explosionEffect.SetActive(false);
     }
 
     void Update() {
         
         if(headinganimator != null && villananimator != null){
-           // Debug.Log(EnemyKilled);
         headinganimator.SetInteger("EnemyKilled",EnemyKilled);
         villananimator.SetInteger("EnemyKilled",EnemyKilled);}
 
