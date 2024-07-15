@@ -340,8 +340,8 @@ Transform:
   m_GameObject: {fileID: 68410000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.421, z: -1}
-  m_LocalScale: {x: 0.24586734, y: 0.23150422, z: 1}
+  m_LocalPosition: {x: -0.03, y: 0, z: -1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 498146328}
@@ -861,6 +861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b22393e6ff6dd0e428654543b864d349, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  animator2: {fileID: 0}
   health: 100
   explosionEffect: {fileID: 1000011797152326, guid: 9393d9cea1b1644429d745dd3004af0d, type: 3}
   obstacle: {fileID: 0}
@@ -1411,6 +1413,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 164597281}
     - target: {fileID: 8891871114822124031, guid: 499049fb6958c7f43bc0f08bf163dd7e, type: 3}
+      propertyPath: camerapos
+      value: 
+      objectReference: {fileID: 1523599354}
+    - target: {fileID: 8891871114822124031, guid: 499049fb6958c7f43bc0f08bf163dd7e, type: 3}
       propertyPath: healthtext
       value: 
       objectReference: {fileID: 1291552794}
@@ -1500,7 +1506,7 @@ Transform:
   m_GameObject: {fileID: 586744059}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.17, y: 1.28, z: 1}
+  m_LocalPosition: {x: 0.17, y: 5.24, z: 1}
   m_LocalScale: {x: 3.7152562, y: 3.7636404, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2081,7 +2087,7 @@ Transform:
   m_GameObject: {fileID: 958507633}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2348,10 +2354,10 @@ RectTransform:
   - {fileID: 475587025}
   m_Father: {fileID: 1972817073}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -266, y: 209}
-  m_SizeDelta: {x: 267.3313, y: 39.6988}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 133.66565, y: -19.849396}
+  m_SizeDelta: {x: 267.3313, y: 39.69879}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1239348770
 MonoBehaviour:
@@ -2802,7 +2808,7 @@ Transform:
   m_GameObject: {fileID: 1631112688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1278, y: 2.0586, z: 2.22}
+  m_LocalPosition: {x: 0.1278, y: 25.8, z: 2.22}
   m_LocalScale: {x: 0.68922424, y: 0.6234303, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3261,6 +3267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2fed474216ee1443a5a6e6d67c98a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lvltext: {fileID: 0}
+  cointext: {fileID: 0}
   lvlselect: {fileID: 0}
   gamec: {fileID: 608621665}
 --- !u!95 &1983840647

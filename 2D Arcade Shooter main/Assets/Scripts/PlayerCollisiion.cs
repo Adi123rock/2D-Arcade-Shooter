@@ -1,10 +1,13 @@
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class PlayerCollisiion : MonoBehaviour
 {
+    public Transform camerapos;
+    Vector3 offset;
     public bool once=true;
     public GameObject gameovr;
     //public GAmeOver gAmeOver;
@@ -42,6 +45,9 @@ public class PlayerCollisiion : MonoBehaviour
         {
             FindObjectOfType<Boss>().enabled=true;
             FindObjectOfType<followplayer>().enabled=false;
+            offset=camerapos.position;
+            offset.y+=2;
+            camerapos.position=offset;
         }
     }
     void GameOver()

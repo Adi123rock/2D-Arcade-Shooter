@@ -27,7 +27,7 @@ public class GameMAnager : MonoBehaviour
         }
         else
         {
-            if(UIvarables.CompLvlno<4)
+            if(UIvarables.CompLvlno<5)
             {
                 Debug.LogError("FIRST REACH LEVEL 5");
             }
